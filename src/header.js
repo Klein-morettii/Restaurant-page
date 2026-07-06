@@ -31,4 +31,8 @@ function topBar (){
     navBut.forEach(button =>{
         nav.append(button)
     })
+
+    return{
+        home, menu, about
+    }
 }

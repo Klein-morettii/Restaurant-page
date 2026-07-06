@@ -61,6 +61,10 @@ function hero(){
                 cell.forEach(div =>{
                     rightYapCell.append(div) 
                 })
+    
+    return {
+        table
+    }
 }
 
 /*

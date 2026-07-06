@@ -1,4 +1,4 @@
-import { topBar } from "./header.js"
+import { topBar} from "./header.js"
 import { greetings, hero} from "./home.js"
 import {footer} from "./footer.js"
 
@@ -9,3 +9,4 @@ console.log(greetings)
 topBar()
 hero()
 footer()
+
