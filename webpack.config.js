@@ -15,6 +15,12 @@ export default {
             template: "./src/template.html",
         }),
     ],
+    devServer: {
+        static: "./dist",
+        port: 3000,
+        open: true,
+        hot: true,
+    },
     module: {
         rules: [
            {
