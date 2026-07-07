@@ -1,8 +1,8 @@
-export {greetings, hero}
+export {home}
 
 const greetings = " Zaaaa Wardo "
 
-function hero(){
+function home(){
     const contain = document.querySelector("#contain")
     const heroImg  = document.createElement("div")
     const heroText = document.createElement("div")
@@ -50,8 +50,8 @@ function hero(){
     
     rightYap.textContent = "TODAY'S SPECIAL"
     
-    cell1.textContent = "FIRE WISKEY"
-    cell2.textContent = "DRAGON STEAK"
+    cell1.textContent = "AGE STATEMENT WHISKEY"
+    cell2.textContent = "CURSE COOKIES"
 
     contain.append(feature)
         feature.append(leftYap)
@@ -63,7 +63,7 @@ function hero(){
                 })
     
     return {
-        table
+        table, contain
     }
 }
 

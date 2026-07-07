@@ -1,12 +1,42 @@
 import { topBar} from "./header.js"
-import { greetings, hero} from "./home.js"
+import {home} from "./home.js"
+import { menu } from "./menu.js"
+import{about} from "./about.js"
 import {footer} from "./footer.js"
 
 import "./styles.css"
 
-console.log(greetings)
 
-topBar()
-hero()
+let buttons = topBar()
+let cont = home()
+buttons.home.addEventListener("click", ()=>{
+    showHome()
+})
+buttons.menu.addEventListener("click", ()=>{
+    showMenu()
+})
+buttons.about.addEventListener("click", ()=>{
+    showAbout()
+})
+cont.table.addEventListener("click", ()=>{
+    bookTable()
+})
+
 footer()
 
+function showHome(){
+    cont.contain.innerHTML = ""
+    home()
+}
+function showMenu(){
+    cont.contain.innerHTML = ""
+    menu()
+}
+function showAbout(){
+    cont.contain.innerHTML = ""
+    about()
+}
+function bookTable(){
+    cont.contain.innerHTML = ""
+    about()
+}

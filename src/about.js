@@ -1,4 +1,4 @@
-export {}
+export {about}
 
 function about() {
      const contain = document.querySelector("#contain")
@@ -30,6 +30,11 @@ function about() {
         const dialog = document.createElement("dialog")
             const to = document.createElement("div")
             const dialogYap = document.createElement("div")
+            const dialogYap1 = document.createElement("div")
+            const dialogYap2 = document.createElement("div")
+            const dialogYap3 = document.createElement("div")
+            const dialogYap4 = document.createElement("div")
+            const dialogYap5 = document.createElement("div")
             const dialogRules = document.createElement("div")
             const dialogContainer = document.createElement("ul")
                 const dialogRules1 = document.createElement("li")
@@ -55,8 +60,14 @@ function about() {
         form.classList.add("form")
         dialog.classList.add("dialog")
         submit.classList.add("submit")
-    dialog.classList.add("dialog")
-
+    to.classList.add("to")
+    dialogYap.classList.add("dialogYapp")
+    dialogYap1.classList.add("dialogYap")
+    dialogYap2.classList.add("dialogYap")
+    dialogYap3.classList.add("dialogYap")
+    dialogYap4.classList.add("dialogYap4")
+    dialogYap5.classList.add("dialogYap4")
+    
     const dialogrule = [dialogRules1, dialogRules2, dialogRules3, dialogRules4, dialogRules5]
     dialogrule.forEach(li =>{
         li.classList.add("list")
@@ -76,18 +87,23 @@ function about() {
         label4.textContent = "SPECIES:  "
         submit.textContent = "REGISTER"
 
-    to.textContent = "to"
-    dialogYap.textContent =""
+    to.textContent = "DEAR CUSTOMER"
+    dialogYap.textContent = "[RESERVATION ACCEPTED]"
+    dialogYap1.textContent ="After a thorough review of your request, your family history, and the regrettable incidents attached to your name, the management of the CROOKED CAULDRON has approved your visit." 
+    dialogYap2.textContent = " Within the coming days, a physical copy of this letter shall arrive by owl. Gather every member of your party around the parchment before setting it aflame."
+    dialogYap3.textContent = " First-time visitors are advised to close their eyes during transit. The tavern exists between roads that ordinary minds were never meant to witness. Attempts to bring more guests than those declared in your reservation will result in... unexpected seating arrangements."
+    dialogYap4.textContent = "We eagerly await your arrival."
+    dialogYap5.textContent = "Keeper of the Crooked Cauldron"
+    close.textContent= "CLOSE"
+
 
     submit.addEventListener("click", (e)=>{
         e.preventDefault()
         dialog.showModal()
-
     })
     close.addEventListener("click", ()=>{
         dialog.close()
     })
-
     /*appending */
     contain.append(containerAbout)
     containerAbout.append(story)
@@ -115,6 +131,11 @@ function about() {
     contain.append(dialog)
         dialog.append(to)
         dialog.append(dialogYap)
+        dialog.append(dialogYap1)
+        dialog.append(dialogYap2)
+        dialog.append(dialogYap3)
+        dialog.append(dialogYap4)
+        dialog.append(dialogYap5)
         dialog.append(dialogRules)
         dialog.append(dialogContainer)
         dialogrule.forEach(li =>{
@@ -122,6 +143,8 @@ function about() {
         })
         dialog.append(close)
 
-
+        return {
+            submit, close
+        }
 
 }
