@@ -26,6 +26,14 @@ function about() {
                         const label4 =document.createElement("label") /* species */
                         const input4 = document.createElement("input")
                     const submit = document.createElement("button")
+                        input1.required = true
+                        input2.required = true
+                        input3.required = true
+                        input4.required = true
+
+                        input4.placeholder = "Not goblin please"
+                        submit.type = "submit"
+
 
         const dialog = document.createElement("dialog")
             const to = document.createElement("div")
@@ -99,7 +107,12 @@ function about() {
 
     submit.addEventListener("click", (e)=>{
         e.preventDefault()
-        dialog.showModal()
+        if (input1.value === "" || input2.value === "" || input3.value === "" || input4.value === ""){
+            return 
+        } 
+        else{
+            dialog.showModal()
+        }
     })
     close.addEventListener("click", ()=>{
         dialog.close()
@@ -128,20 +141,21 @@ function about() {
                 field4.append(input4)
             field.append(submit)
 
-    contain.append(dialog)
-        dialog.append(to)
-        dialog.append(dialogYap)
-        dialog.append(dialogYap1)
-        dialog.append(dialogYap2)
-        dialog.append(dialogYap3)
-        dialog.append(dialogYap4)
-        dialog.append(dialogYap5)
-        dialog.append(dialogRules)
-        dialog.append(dialogContainer)
-        dialogrule.forEach(li =>{
-            dialog.append(li)
-        })
-        dialog.append(close)
+        contain.append(dialog)
+            dialog.append(to)
+            dialog.append(dialogYap)
+            dialog.append(dialogYap1)
+            dialog.append(dialogYap2)
+            dialog.append(dialogYap3)
+            dialog.append(dialogYap4)
+            dialog.append(dialogYap5)
+            dialog.append(dialogRules)
+            dialog.append(dialogContainer)
+            dialogrule.forEach(li =>{
+                dialog.append(li)
+            })
+            dialog.append(close)
+
 
         return {
             submit, close

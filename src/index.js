@@ -18,9 +18,6 @@ buttons.menu.addEventListener("click", ()=>{
 buttons.about.addEventListener("click", ()=>{
     showAbout()
 })
-cont.table.addEventListener("click", ()=>{
-    bookTable()
-})
 
 footer()
 
@@ -33,10 +30,6 @@ function showMenu(){
     menu()
 }
 function showAbout(){
-    cont.contain.innerHTML = ""
-    about()
-}
-function bookTable(){
     cont.contain.innerHTML = ""
     about()
 }

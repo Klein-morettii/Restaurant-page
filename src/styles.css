@@ -158,6 +158,8 @@ nav{
 }
 
 
+
+
 /*menu section*/
 
 .menHead{
@@ -227,7 +229,6 @@ nav{
     padding: 1em;
     margin: 2em;
     overflow-y: auto;
-    justify-content: center;
 }
 .gridCell{
     display: flex;
@@ -235,18 +236,37 @@ nav{
     align-items: center;
     flex-direction: column;
     border: none;
-    border-radius: 1em;
+    border-radius: 1.5em;
     margin: 0.5em;
-    width: 20em;
-    height: 15em;
-    padding: 0.5em;
+    width: 18em;
+    height: 18em;
+    padding: 0.8em;
     background-color: #4A3428;
-    font-size: 1rem;
+    font-size: 1.3em;
+    color: goldenrod;
+    transition: all 0.15s ease;
 }
 .gridCell:hover{
     transform: scale(1.05);
     box-shadow: 4px 4px 7px black;
 }
+.foodNam{
+    text-align: center;
+    font-size: 2.2rem;
+    color: #F3E6C7;
+}
+.descr{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #CDBB9A;
+}
+.monii{
+    font-size: 2rem;
+}
+
+
+
+
 
 /* about section*/
 
@@ -257,6 +277,7 @@ nav{
     flex-direction: row;
     padding: 1em;
     margin: 1em;
+    gap: 3em;
 }
 .story{
     width: 50%;
@@ -267,7 +288,7 @@ nav{
 .lore{
     color: #CDBB9A;
     font-size: 2rem;
-    line-height: 1.2em;
+    line-height: 1.5em;
     margin-top: 0.3em;
 }
 .reminder{
@@ -279,10 +300,11 @@ nav{
     color: #CDBB9A;
     font-size: 2rem;
     margin-top: 0.3em;
+    line-height: 1.5em;
 }
 
 .seat{
-    width: 50%;
+    width: 55%;
     text-align: center;
     font-size: 3rem;
     color: #F3E6C7;

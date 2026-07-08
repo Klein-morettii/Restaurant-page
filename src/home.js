@@ -1,5 +1,5 @@
 export {home}
-
+import { about } from "./about.js";
 const greetings = " Zaaaa Wardo "
 
 function home(){
@@ -61,6 +61,15 @@ function home(){
                 cell.forEach(div =>{
                     rightYapCell.append(div) 
                 })
+    
+
+    table.addEventListener("click", ()=>{
+        bookTable()
+    })
+    function bookTable(){
+        contain.innerHTML = ""
+        about()
+    }
     
     return {
         table, contain
